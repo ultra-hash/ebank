@@ -62,3 +62,6 @@ export const LoginButton = styled.button`
   outline: none;
   padding: 10px;
 `
+export const ErrorMsg = styled.p`
+  color: #ff0b37;
+`
