@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import Cookies from 'js-cookie'
 
 import {
   OuterContainer,
@@ -12,7 +13,11 @@ import {
 } from './styledComponents'
 
 class Home extends Component {
-  state = {}
+  onClickLogout = () => {
+    Cookies.remove('jwt_token')
+    const {history} = this.props
+    history.replace('/ebank/login')
+  }
 
   render() {
     return (
@@ -23,7 +28,7 @@ class Home extends Component {
               src="https://assets.ccbp.in/frontend/react-js/ebank-logo-img.png"
               alt="website logo"
             />
-            <LogoutButton>Logout</LogoutButton>
+            <LogoutButton onClick={this.onClickLogout}>Logout</LogoutButton>
           </HeaderSection>
           <BodySection>
             <Heading>Your Flexibility, Our Excellence</Heading>
