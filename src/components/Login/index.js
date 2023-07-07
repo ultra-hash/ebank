@@ -53,6 +53,11 @@ class Login extends Component {
 
   render() {
     const {errorMsg, showError, userId, pin} = this.state
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      const {history} = this.props
+      history.replace('/')
+    }
     return (
       <OuterContainer>
         <InnerContainer>
