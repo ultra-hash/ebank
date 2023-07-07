@@ -36,6 +36,7 @@ export const LoginForm = styled.form`
 `
 export const Heading = styled.h1`
   margin-bottom: 10px;
+  color: #183b56;
 `
 export const FormItemContainer = styled.div`
   display: flex;
@@ -44,11 +45,14 @@ export const FormItemContainer = styled.div`
 `
 export const FormLabel = styled.label`
   font-weight: bold;
+  color: #5a7184;
 `
 export const FormTextInput = styled.input`
-  padding: 5px;
+  padding: 8px;
   width: 300px;
   outline: none;
+  border: 1px solid #c3cad9;
+  border-radius: 5px;
 `
 export const LoginButton = styled.button`
   background-color: #1565d8;
